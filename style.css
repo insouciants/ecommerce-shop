@@ -1,3 +1,58 @@
+body {
+    margin: 0;
+    width: 100%;
+}
+
 header {
+    display: inline;
+}
+
+header section {
+    float: right;
+}
+
+header section button {
+    border-radius: 100px;
+    border: none;
+    background-color: none;
+}
+header section button img {
+    width: 50px;
+    height: 50px;
+}
+
+header img, nav {
+    display: inline;
+}
+.content {
+    display: flex;
+}
+
+.big_image {
+    width: 500px;
+}
+
+.price{
+    display: flex;
+}
+
+.originalPrice {
+    display: block;
+}
+
+.checkoutBox {
+    width: 500px;
+    height: 300px;
+    border: 1px black solid;
+    z-index: 2;
+    position: absolute;
+    right: 5vw;
+    background-color: white;
+    box-shadow: 0 0 25px rgba(0, 0, 0, 0.323) ;
+    overflow: hidden;
+
+}
+
+.checkoutContent {
     display: flex;
 }

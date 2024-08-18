@@ -27,42 +27,53 @@
   <hr>
   <div class="content">
     <div class="images">
-      <img class="big_image" src="images/image-product-1.jpg" alt="">
+      <button><img class="big_image" src="images/image-product-1.jpg" alt=""></button>
       <section class="image_thumbnail">
-        <img src="images/image-product-1-thumbnail.jpg" alt="">
-        <img src="images/image-product-2-thumbnail.jpg" alt="">
-        <img src="images/image-product-3-thumbnail.jpg" alt="">
-        <img src="images/image-product-4-thumbnail.jpg" alt="">
+        <button><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
+        <button><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
+        <button><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
+        <button><img src="images/image-product-4-thumbnail.jpg" alt=""></button>
       </section>
     </div>
-    <div class="info">
-      <h4>Sneaker Company</h4>
-      <h1>Fall Limited Edition Sneakers</h1>
-      <p class="desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-        durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+    
+    <div class="right_side">
+      <div class="info">
+        <h4>Sneaker Company</h4>
+        <h1>Fall Limited Edition Sneakers</h1>
+        <p class="desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+      </div>
+      <div class="price">
+        <h2 class="currentPrice">$125.00</h2>
+        <h2 class="discountValue">50%</h2>
+      </div>
+      <h2 class="originalPrice">$250.00</h2>
+      <div class="buying">
+        <button onclick="decreaseCounterValue()"><img src="images/icon-minus.svg" alt=""></button>
+        <input readonly type="text" name="" id="counter" value="0">
+        <button onclick="addCounterValue()"><img src="images/icon-plus.svg" alt=""></button>
+        <button onclick="addToCart()">Add to cart</button>
+      </div>
     </div>
-  </div>
-  
-  
-  
-  
-  
-  
+    <div class="checkoutBox">
+      <h1>cart</h1>
+      
+      <hr>
+      <div class="checkoutContent">
+        <img src="images/image-product-1-thumbnail.jpg" alt="">
 
+      <div class="checkoutRight">
+      <h1>Fall Limited Edition Sneakers</h1>
+      <h1 id="transactionInfo"></h1>
+      </div>
+      <button><img src="images/icon-delete.svg" alt=""></button>
 
-
-  
-
-  
-
-  $125.00
-  50%
-  $250.00
-
-  0
-  Add to cart
-  
-  <div class="attribution">
+      </div>
+      
+    </div>
+    </div>
+    
+  <div class="attribution" style="display: none;">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
   </div>
