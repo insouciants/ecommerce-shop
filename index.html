@@ -20,19 +20,19 @@
       <a href="">Contact</a>
     </nav>
     <section>
-      <button><img src="images/icon-cart.svg" alt=""></button>
+      <button onclick="showList()"><img src="images/icon-cart.svg" alt=""></button>
       <button><img src="images/image-avatar.png" alt=""></button>
     </section>
   </header>
   <hr>
   <div class="content">
     <div class="images">
-      <button><img class="big_image" src="images/image-product-1.jpg" alt=""></button>
+      <button><img id="bigImage" src="images/image-product-1.jpg" alt=""></button>
       <section class="image_thumbnail">
-        <button><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
-        <button><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
-        <button><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
-        <button><img src="images/image-product-4-thumbnail.jpg" alt=""></button>
+        <button onclick="changeBigImage(1)"><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
+        <button onclick="changeBigImage(2)"><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
+        <button onclick="changeBigImage(3)"><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
+        <button onclick="changeBigImage(4)"><img src="images/image-product-4-thumbnail.jpg" alt=""></button>
       </section>
     </div>
     
@@ -55,11 +55,10 @@
         <button onclick="addToCart()">Add to cart</button>
       </div>
     </div>
-    <div class="checkoutBox">
+    <div id="checkoutBox">
       <h1>cart</h1>
-      
       <hr>
-      <div class="checkoutContent">
+      <div id="checkoutContent">
         <img src="images/image-product-1-thumbnail.jpg" alt="">
 
       <div class="checkoutRight">
@@ -69,7 +68,6 @@
       <button><img src="images/icon-delete.svg" alt=""></button>
 
       </div>
-      
     </div>
     </div>
     
