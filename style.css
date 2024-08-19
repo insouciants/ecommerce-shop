@@ -181,20 +181,49 @@ header img, nav {
     font-size: 17px;
     margin-left: 6px;
     margin-bottom: 30px;
+    text-decoration: line-through;
 }
 
 #checkoutBox {
     width: 500px;
     height: 300px;
-    border: 1px black solid;
+    border-radius: 10px;
     z-index: 2;
     position: absolute;
     right: 5vw;
+    top: 7vw;
     background-color: white;
     box-shadow: 0 0 25px rgba(0, 0, 0, 0.323) ;
     overflow: hidden;
     display: none;
 }
+
+#checkoutBox hr {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.h1 {
+    font-family: Kuh;
+    margin-left: 40px;
+    font-size: 20px;
+}
+
+#nothing p{
+    font-family: Kuh;
+    display: flex;
+    font-size: 20px;
+    margin-left: 33%;
+    margin-top: 90px;
+}
+
+.avatar:hover {
+    border: 3px solid rgb(255, 136, 0);
+    border-radius: 25px;
+}
+
 
 #checkoutContent {
     display: none;
@@ -265,4 +294,39 @@ input {
 
 .addCart:hover {
     background-color: hsl(25, 100%, 71%);
+}
+
+#two {
+    margin-left: 10%;
+    margin-top: 5%;
+    width: 80%;
+}
+
+.checkoutImg {
+    height: 120px;
+    border-radius: 10px;
+}
+
+#checkoutContent h1 {
+    font-family: Kuh;
+    color: hwb(0 14% 86%);
+    font-size: 20px;
+    margin-left: 5%;
+}
+
+#checkoutContent button img{
+    height: 25px;
+    
+}
+#checkoutContent button{
+    height: 35px;
+    margin-left: 20%;
+    margin-top: 10%;
+    border: none;
+    background-color: rgba(240, 248, 255, 0);
+}
+
+#checkoutContent {
+    margin-left: 7%;
+    margin-top: 5%;
 }

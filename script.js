@@ -10,6 +10,7 @@ let thirdImg = document.getElementById("3")
 let fourthImg = document.getElementById("4")
 let lightBig = document.getElementById("lightBig")
 let lightbox = document.getElementById("lightbox")
+let nothing = document.getElementById("nothing")
 
 function addCounterValue() {
     counterValue += 1
@@ -24,15 +25,20 @@ function decreaseCounterValue() {
     }
 }
 
+
 function addToCart() {
     if (counter.value === "0") {
-        checkoutContent.style.display = "none"
-    } else
+        nothing.style.display = "flex"
+    } else {
+        let calculation = (counterValue * 125)
     checkoutContent.style.display = "flex"
-    transactionInfoText = "$125" + " X " + counterValue + " = " + "$" + (counterValue * 125)
+    transactionInfoText = "$125" + " X " + counterValue + " = " + "$" + calculation
     transactionInfo.textContent = transactionInfoText
     counter.value = 0
     counterValue = 0
+    nothing.style.display = 'none' 
+
+    }
 }
 
 function showList() {
@@ -40,8 +46,17 @@ function showList() {
         checkoutBox.style.display = "block"
     } else {
         checkoutBox.style.display = "none"
-    }
+    } 
 }
+
+function hideList() {
+    if (checkoutContent.style.display === "flex") {
+        checkoutContent.style.display = "none"
+        nothing.style.display = "flex"
+    }
+        
+}
+
 
 function changeBigImage(value) {
     switch(value) {

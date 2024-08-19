@@ -22,8 +22,8 @@
       </nav>
       <section>
 
-        <button onclick="showList()"><img src="images/icon-cart.svg" alt=""></button>
-        <button><img src="images/image-avatar.png" alt=""></button>
+        <button onclick="showList()"><img src="images/icon-cart.svg" alt="" class=""></button>
+        <button><img src="images/image-avatar.png" alt="" class="avatar"></button>
       </section>
     </header>
     <hr>
@@ -61,18 +61,19 @@
         </div>
       </div>
       <div id="checkoutBox">
-        <h1>cart</h1>
+        <h1 class="h1">Cart</h1>
         <hr>
+        <div id="nothing"><p>Your cart is empty.</p></div>
         <div id="checkoutContent">
-          <img src="images/image-product-1-thumbnail.jpg" alt="">
+          <div style="display: flex;"><img src="images/image-product-1-thumbnail.jpg" class="checkoutImg">
   
-        <div class="checkoutRight">
-        <h1>Fall Limited Edition Sneakers</h1>
-        <h1 id="transactionInfo"></h1>
+            <div id="checkoutRight">
+            <h1>Fall Limited Edition Sneakers</h1>
+            <h1 id="transactionInfo"></h1>
+            </div>
+            <button onclick="hideList()"><img src="images/icon-delete.svg" alt=""></button></div>
         </div>
-        <button><img src="images/icon-delete.svg" alt=""></button>
-        </div>
-        
+        <button class="addCart" id="two" id="checkoutContent">Checkout</button>
       </div>
       </div>
       <div id="lightbox">
