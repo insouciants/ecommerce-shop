@@ -14,13 +14,14 @@
     <header>
       <img src="images/logo.svg" alt="">
       <nav>
-        Collections
-        Men
-        Women
-        About
-        Contact
+        <p>Collections</p>
+        <p>Men</p>
+        <p>Women</p>
+        <p>About</p>
+        <p>Contact</p>
       </nav>
       <section>
+
         <button onclick="showList()"><img src="images/icon-cart.svg" alt=""></button>
         <button><img src="images/image-avatar.png" alt=""></button>
       </section>
@@ -50,10 +51,13 @@
         </div>
         <h2 class="originalPrice">$250.00</h2>
         <div class="buying">
-          <button onclick="decreaseCounterValue()"><img src="images/icon-minus.svg" alt=""></button>
-          <input readonly type="text" name="" id="counter" value="0">
+          <div class="addSortiment">
+            <button onclick="decreaseCounterValue()"><img src="images/icon-minus.svg" alt=""></button>
+          <input disabled type="text" name="" id="counter" value="0">
           <button onclick="addCounterValue()"><img src="images/icon-plus.svg" alt=""></button>
-          <button onclick="addToCart()">Add to cart</button>
+          </div>
+          
+          <button class="addCart" onclick="addToCart()">Add to cart</button>
         </div>
       </div>
       <div id="checkoutBox">

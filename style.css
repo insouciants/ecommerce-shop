@@ -3,6 +3,26 @@ img {
     user-drag: none;
 }
 
+nav p{
+    margin-left: 20px;
+    display: inline;
+    cursor: pointer;
+}
+
+nav {
+    margin-left: 30px;
+}
+
+.content {
+    width: 75%;
+    margin: 50px auto;
+}
+
+@font-face {
+    font-family: Kuh;
+    src: url(fonts/KumbhSans-VariableFont_YOPQ\,wght.ttf);
+}
+
 button:hover {
     cursor: pointer;
 }
@@ -11,14 +31,20 @@ body {
     margin: 0;
     overflow-x: hidden;
     overflow-y: hidden;
+    font-family: Kuh;
 }
 
+.right_side {
+    width: 40%;
+    margin-left: 100px;
+}
 .design {
-    padding: 70px;
+    padding: 80px 50px;
 }
 
 hr {
     margin-top: 50px;
+    width: 90%;
 }
 
 header {
@@ -48,18 +74,41 @@ header {
     border: none;
 }
 
+.addSortiment {
+    background-color: hsl(223, 64%, 98%);
+    height: auto;
+    width: 170px;
+    border-radius: 10px;
+}
+
+.addSortiment button, input {
+    background-color: hsla(230, 60%, 98%, 0);
+    border: none;
+    width: 50px;
+    text-align: center;
+    margin: 15px 0;
+    color: black;
+    font: Kuh;
+    font-weight: 900;
+}
+
+
 header section {
     float: right;
+    background-color: rgba(95, 158, 160, 0);
+    margin-right: 60px;
 }
+
 
 header section button {
     border-radius: 100px;
     border: none;
-    background-color: none;
+    background-color: rgba(240, 248, 255, 0);
 }
 header section button img {
-    width: 50px;
-    height: 50px;
+    width: 35px;
+    margin-right: 30px;
+    height: 35px;
 }
 
 header img, nav {
@@ -141,4 +190,31 @@ header img, nav {
     position: absolute;
     top: 120px;
     right: 250px;
+}
+
+input:hover {
+    cursor: default;
+}
+
+input {
+    pointer-events: none;
+}
+
+.buying {
+    display: flex;
+    gap: 20px;
+}
+
+.addCart {
+    width: 300px;
+    height: 50px;
+    background-color: hsl(26, 100%, 55%);
+    border: none;
+    border-radius: 10px;
+    font-family: Kuh;
+    font-weight: 900;
+}
+
+.addCart:hover {
+    background-color: hsl(25, 100%, 71%);
 }
