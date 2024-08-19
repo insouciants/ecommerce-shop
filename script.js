@@ -8,6 +8,8 @@ let firstImg = document.getElementById("1")
 let secondImg = document.getElementById("2")
 let thirdImg = document.getElementById("3")
 let fourthImg = document.getElementById("4")
+let lightBig = document.getElementById("lightBig")
+let lightbox = document.getElementById("lightbox")
 
 function addCounterValue() {
     counterValue += 1
@@ -52,4 +54,73 @@ function changeBigImage(value) {
         case 4: bigImage.src = "images/image-product-4.jpg"
         break
     }
+}
+let currentImage = 1
+function changeLightbox(value) {
+    switch(value) {
+        case 1: lightBig.src = "images/image-product-1.jpg"
+        currentImage = value
+        break
+        case 2: lightBig.src = "images/image-product-2.jpg"
+        currentImage = value
+        break
+        case 3: lightBig.src = "images/image-product-3.jpg"
+        currentImage = value
+        break
+        case 4: lightBig.src = "images/image-product-4.jpg"
+        currentImage = value
+        break
+    }
+}
+
+function change(value) {
+    if (value === 'next') {
+        switch(currentImage) {
+            case 1:
+                lightBig.src = "images/image-product-2.jpg"
+                currentImage = 2
+                break
+            case 2:
+                lightBig.src = "images/image-product-3.jpg"
+                currentImage = 3
+                break
+            case 3:
+                    lightBig.src = "images/image-product-4.jpg"
+                    currentImage = 4
+                    break
+            case 4:
+                    lightBig.src = "images/image-product-1.jpg"
+                    currentImage = 1
+                    break    
+                  
+        }
+    } else {
+        switch(currentImage) {
+            case 1:
+                lightBig.src = "images/image-product-4.jpg"
+                currentImage = 4
+                break
+            case 2:
+                lightBig.src = "images/image-product-1.jpg"
+                currentImage = 1
+                break
+            case 3:
+                    lightBig.src = "images/image-product-2.jpg"
+                    currentImage = 2
+                    break
+            case 4:
+                    lightBig.src = "images/image-product-3.jpg"
+                    currentImage = 3
+                    break    
+                  
+        }
+    }
+}
+
+function closeLightbox() {
+    lightbox.style.display = 'none';
+}
+
+function openLightbox() {
+    lightbox.style.display = 'flex';
 }

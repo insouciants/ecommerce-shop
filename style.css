@@ -1,10 +1,51 @@
+img {
+    -webkit-user-drag: none; /* For Safari and Chrome */
+    user-drag: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 body {
     margin: 0;
-    width: 100%;
+    overflow-x: hidden;
+    overflow-y: hidden;
+}
+
+.design {
+    padding: 70px;
+}
+
+hr {
+    margin-top: 50px;
 }
 
 header {
     display: inline;
+    padding: 10%;
+    height: 100px;
+}
+
+.image_thumbnail img {
+    height: 105px;
+    margin: 20px 3px;
+    border-radius: 15px;
+}
+
+.image_thumbnail img:hover {
+    background-color: beige;
+    border: 3px solid rgb(255, 157, 0) inset;
+}
+
+.images section {
+    margin-left: 4px;
+    height: 100px;
+}
+
+.image_thumbnail button {
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
 }
 
 header section {
@@ -30,6 +71,12 @@ header img, nav {
 
 #bigImage {
     width: 500px;
+    border-radius: 20px;
+}
+
+.images button {
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
 }
 
 .price{
@@ -55,4 +102,43 @@ header img, nav {
 
 #checkoutContent {
     display: none;
+}
+
+#lightbox {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.556);
+    z-index: 3;
+    top: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+
+.lightSmall img{
+    height: 100px;
+    width: 100px;
+    
+}
+
+#lightBig {
+    width: 500px;
+    height: 500px;
+}
+
+
+.arrows {
+    position: absolute;
+    display: flex;
+    z-index: 4;
+    display: flex;
+    gap: 450px;
+    top: 500px;
+}
+
+#closing {
+    position: absolute;
+    top: 120px;
+    right: 250px;
 }

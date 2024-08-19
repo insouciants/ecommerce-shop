@@ -10,71 +10,90 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <img src="images/logo.svg" alt="">
-    <nav>
-      <a href="">Collections</a>
-      <a href="">Men</a>
-      <a href="">Women</a>
-      <a href="">About</a>
-      <a href="">Contact</a>
-    </nav>
-    <section>
-      <button onclick="showList()"><img src="images/icon-cart.svg" alt=""></button>
-      <button><img src="images/image-avatar.png" alt=""></button>
-    </section>
-  </header>
-  <hr>
-  <div class="content">
-    <div class="images">
-      <button><img id="bigImage" src="images/image-product-1.jpg" alt=""></button>
-      <section class="image_thumbnail">
-        <button onclick="changeBigImage(1)"><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
-        <button onclick="changeBigImage(2)"><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
-        <button onclick="changeBigImage(3)"><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
-        <button onclick="changeBigImage(4)"><img src="images/image-product-4-thumbnail.jpg" alt=""></button>
+  <div class="design">
+    <header>
+      <img src="images/logo.svg" alt="">
+      <nav>
+        Collections
+        Men
+        Women
+        About
+        Contact
+      </nav>
+      <section>
+        <button onclick="showList()"><img src="images/icon-cart.svg" alt=""></button>
+        <button><img src="images/image-avatar.png" alt=""></button>
       </section>
-    </div>
-    
-    <div class="right_side">
-      <div class="info">
-        <h4>Sneaker Company</h4>
+    </header>
+    <hr>
+    <div class="content">
+      <div class="images">
+        <button onclick="openLightbox()"><img id="bigImage" src="images/image-product-1.jpg" alt=""></button>
+        <section class="image_thumbnail">
+          <button onclick="changeBigImage(1)"><img src="images/image-product-1-thumbnail.jpg" alt=""></button>
+          <button onclick="changeBigImage(2)"><img src="images/image-product-2-thumbnail.jpg" alt=""></button>
+          <button onclick="changeBigImage(3)"><img src="images/image-product-3-thumbnail.jpg" alt=""></button>
+          <button onclick="changeBigImage(4)"><img src="images/image-product-4-thumbnail.jpg" alt=""></button>
+        </section>
+      </div>
+      
+      <div class="right_side">
+        <div class="info">
+          <h4>Sneaker Company</h4>
+          <h1>Fall Limited Edition Sneakers</h1>
+          <p class="desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
+            durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        </div>
+        <div class="price">
+          <h2 class="currentPrice">$125.00</h2>
+          <h2 class="discountValue">50%</h2>
+        </div>
+        <h2 class="originalPrice">$250.00</h2>
+        <div class="buying">
+          <button onclick="decreaseCounterValue()"><img src="images/icon-minus.svg" alt=""></button>
+          <input readonly type="text" name="" id="counter" value="0">
+          <button onclick="addCounterValue()"><img src="images/icon-plus.svg" alt=""></button>
+          <button onclick="addToCart()">Add to cart</button>
+        </div>
+      </div>
+      <div id="checkoutBox">
+        <h1>cart</h1>
+        <hr>
+        <div id="checkoutContent">
+          <img src="images/image-product-1-thumbnail.jpg" alt="">
+  
+        <div class="checkoutRight">
         <h1>Fall Limited Edition Sneakers</h1>
-        <p class="desc">These low-profile sneakers are your perfect casual wear companion. Featuring a 
-          durable rubber outer sole, they’ll withstand everything the weather can offer.</p>
+        <h1 id="transactionInfo"></h1>
+        </div>
+        <button><img src="images/icon-delete.svg" alt=""></button>
+        </div>
+        
       </div>
-      <div class="price">
-        <h2 class="currentPrice">$125.00</h2>
-        <h2 class="discountValue">50%</h2>
       </div>
-      <h2 class="originalPrice">$250.00</h2>
-      <div class="buying">
-        <button onclick="decreaseCounterValue()"><img src="images/icon-minus.svg" alt=""></button>
-        <input readonly type="text" name="" id="counter" value="0">
-        <button onclick="addCounterValue()"><img src="images/icon-plus.svg" alt=""></button>
-        <button onclick="addToCart()">Add to cart</button>
+      <div id="lightbox">
+        <button id="closing" onclick="closeLightbox()"><img src="images/icon-close.svg" alt=""></button>
+        <div class="lightboxContent">
+          <img id="lightBig" src="images/image-product-1.jpg" alt="">
+          <div class="arrows">
+            <button onclick="change('previous')"><img src="images/icon-previous.svg" alt=""></button>
+            <button onclick="change('next')"><img src="images/icon-next.svg" alt=""></button>
+          </div>
+        <section class="lightSmall">
+          <button onclick="changeLightbox(1)"><img src="images/image-product-1.jpg" alt=""></button>
+          <button onclick="changeLightbox(2)"><img src="images/image-product-2.jpg" alt=""></button>
+          <button onclick="changeLightbox(3)"><img src="images/image-product-3.jpg" alt=""></button>
+          <button onclick="changeLightbox(4)"><img src="images/image-product-4.jpg" alt=""></button>
+        </section>
+        </div>
+        
       </div>
+    <div class="attribution" style="display: none;">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
     </div>
-    <div id="checkoutBox">
-      <h1>cart</h1>
-      <hr>
-      <div id="checkoutContent">
-        <img src="images/image-product-1-thumbnail.jpg" alt="">
-
-      <div class="checkoutRight">
-      <h1>Fall Limited Edition Sneakers</h1>
-      <h1 id="transactionInfo"></h1>
-      </div>
-      <button><img src="images/icon-delete.svg" alt=""></button>
-
-      </div>
-    </div>
-    </div>
-    
-  <div class="attribution" style="display: none;">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
   </div>
+
   <script src="script.js"></script>
 </body>
 </html>
