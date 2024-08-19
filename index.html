@@ -73,17 +73,18 @@
             </div>
             <button onclick="hideList()"><img src="images/icon-delete.svg" alt=""></button></div>
         </div>
-        <button class="addCart" id="two" id="checkoutContent">Checkout</button>
+        <button class="addCart1" id="two" style="display: none;">Checkout</button>
       </div>
       </div>
       <div id="lightbox">
+        <div class="arrows">
+          <button onclick="change('previous')"><img src="images/icon-previous.svg" alt=""></button>
+          <button onclick="change('next')"><img src="images/icon-next.svg" alt=""></button>
+        </div>
         <button id="closing" onclick="closeLightbox()"><img src="images/icon-close.svg" alt=""></button>
         <div class="lightboxContent">
           <img id="lightBig" src="images/image-product-1.jpg" alt="">
-          <div class="arrows">
-            <button onclick="change('previous')"><img src="images/icon-previous.svg" alt=""></button>
-            <button onclick="change('next')"><img src="images/icon-next.svg" alt=""></button>
-          </div>
+          
         <section class="lightSmall">
           <button onclick="changeLightbox(1)"><img src="images/image-product-1.jpg" alt=""></button>
           <button onclick="changeLightbox(2)"><img src="images/image-product-2.jpg" alt=""></button>

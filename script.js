@@ -11,6 +11,7 @@ let fourthImg = document.getElementById("4")
 let lightBig = document.getElementById("lightBig")
 let lightbox = document.getElementById("lightbox")
 let nothing = document.getElementById("nothing")
+let checkoutButton = document.getElementById("two")
 
 function addCounterValue() {
     counterValue += 1
@@ -32,6 +33,7 @@ function addToCart() {
     } else {
         let calculation = (counterValue * 125)
     checkoutContent.style.display = "flex"
+    checkoutButton.style.display = "block"
     transactionInfoText = "$125" + " X " + counterValue + " = " + "$" + calculation
     transactionInfo.textContent = transactionInfoText
     counter.value = 0
@@ -46,6 +48,8 @@ function showList() {
         checkoutBox.style.display = "block"
     } else {
         checkoutBox.style.display = "none"
+        checkoutButton.style.display = 'none'
+
     } 
 }
 
@@ -53,6 +57,7 @@ function hideList() {
     if (checkoutContent.style.display === "flex") {
         checkoutContent.style.display = "none"
         nothing.style.display = "flex"
+        checkoutButton.style.display = "none"
     }
         
 }
